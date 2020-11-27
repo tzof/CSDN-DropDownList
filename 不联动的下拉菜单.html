@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不联动的下拉菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        input[type="checkbox"]{
+            display: none;
+        }
+        label{
+            display: block;
+        }
+        label ul{
+            overflow: hidden;
+            height: 0;
+        }
+        #one:checked~label[for="one"]>ul{
+            overflow: visible;
+            height: auto;
+        }
+        #two:checked~label[for="two"]>ul{
+            overflow: visible;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="one">
+    <input type="checkbox" id="two">
+    <main>
+        <!-- <h1>代表网页中的其他内容</h1> -->
+    </main>
+    <label for="one">
+        <h2>下拉菜单1</h2>
+        <ul>
+            <li>下拉菜单1.1</li>
+            <li>下拉菜单1.2</li>
+        </ul>
+    </label>
+    <label for="two">
+        <h2>下拉菜单2</h2>
+        <ul>
+            <li>下拉菜单2.1</li>
+            <li>下拉菜单2.2</li>
+            <li>下拉菜单2.3</li>
+        </ul>
+    </label>
+</body>
+</html>
